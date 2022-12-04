@@ -13,28 +13,17 @@ public class TestSwitchExpression {
 		input.close();
 		String resultado;
 		
-		switch (dia) {
-			case "segunda":
-				resultado = "dia útil";
-				break;
-			case "terça":
-				resultado = "dia útil";
-				break;	
-			case "quarta":
-				resultado = "dia útil";
-				break;	
-			case "quinta":
-				resultado = "dia útil";
-				break;	
-			case "sexta":
-				resultado = "dia útil";
-				break;	
-			case "sabado":
-				resultado = "final de semana";
-				break;		
-			default: 
-				resultado = "Dia Invalido";
-		}
+		resultado = switch(dia) {
+			case "segunda" -> "dia util";
+			case "terça" -> "dia util";
+			case "quarta" -> "dia util";
+			case "quinta" -> "dia util";
+			case "sexta" -> "dia util";
+			case "sabado" -> "final de semana";
+			case "domingo" -> "final de semana";
+			default -> "dia invalido";
+
+		};
 		System.out.println(resultado);
 	}
 }
